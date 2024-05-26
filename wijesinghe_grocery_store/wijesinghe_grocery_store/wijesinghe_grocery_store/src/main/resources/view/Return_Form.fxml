@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1302.0" style="-fx-background-color: #9AECDB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ReturnFormController">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="688.0" prefWidth="226.0" style="-fx-background-color: #9AECDB;">
+         <children>
+            <Label layoutX="29.0" layoutY="20.0" text="Return &amp; Exchange" textFill="#2c3e50" AnchorPane.leftAnchor="29.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="73.0" text="Return ID" AnchorPane.leftAnchor="32.0" />
+            <Label layoutX="31.0" layoutY="134.0" text="Order ID" />
+            <Label layoutX="31.0" layoutY="205.0" text="Return Reason" />
+            <Label layoutX="32.0" layoutY="278.0" text="Return Status" />
+            <TextField fx:id="txtReturnID" layoutX="29.6" layoutY="97.0" onAction="#txtReturnIDOnAction" prefHeight="26.0" prefWidth="164.0" promptText="ID" AnchorPane.leftAnchor="29.6" />
+            <TextField fx:id="txtOrderID" layoutX="28.8" layoutY="164.0" prefHeight="26.0" prefWidth="164.0" promptText="ID" AnchorPane.leftAnchor="28.8" />
+            <TextField fx:id="txtReturnReason" layoutX="31.0" layoutY="228.0" prefHeight="26.0" prefWidth="164.0" promptText="Reason" />
+            <TextField fx:id="txtReturnStatus" layoutX="32.0" layoutY="302.0" prefHeight="26.0" prefWidth="164.0" promptText="Status" />
+            <JFXButton buttonType="RAISED" layoutX="60.0" layoutY="625.0" onAction="#btnBackOnAction" prefHeight="16.0" prefWidth="106.0" stylesheets="@../css/button.css" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="gradient-button7" />
+                  <String fx:value="button-64" />
+               </styleClass>
+            </JFXButton>
+            <Line endX="129.06666564941406" layoutX="59.0" layoutY="52.0" startX="-23.000049591064453" />
+            <TextField fx:id="txtExchangeRequest" layoutX="33.0" layoutY="377.0" prefHeight="26.0" prefWidth="164.0" promptText="Request" />
+            <TextField fx:id="txtReturnDate" layoutX="33.0" layoutY="456.0" prefHeight="26.0" prefWidth="164.0" promptText="Date" />
+            <TextField fx:id="txtRefundAmount" layoutX="33.0" layoutY="534.0" prefHeight="26.0" prefWidth="164.0" promptText="Amount" />
+            <Label layoutX="33.0" layoutY="349.0" text="Exchange Request" />
+            <Label layoutX="34.0" layoutY="429.0" text="Return Date" />
+            <Label layoutX="35.0" layoutY="503.0" text="Refund Amount" />
+            <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="75.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-back-94.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblReturnExchange" layoutX="238.0" layoutY="39.0" prefHeight="562.0" prefWidth="1043.0">
+         <columns>
+            <TableColumn fx:id="colReturnID" prefWidth="109.33328247070312" text="Return ID" />
+            <TableColumn fx:id="colOrderID" prefWidth="106.666748046875" text="Order ID" />
+            <TableColumn fx:id="colReturnReason" prefWidth="142.40008544921875" text="Return Reason" />
+            <TableColumn fx:id="colReturnStatus" prefWidth="147.46685791015625" text="Return Status" />
+            <TableColumn fx:id="colExchangeRequest" prefWidth="168.800048828125" text="Exchange Request" />
+            <TableColumn fx:id="colReturnDate" prefWidth="175.73345947265625" text="Return Date" />
+            <TableColumn fx:id="colRefundAmount" prefWidth="211.7333984375" text="Refund Amount" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="464.0" layoutY="622.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="115.0" stylesheets="@../css/button.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-clear-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="gradient-button1" />
+            <String fx:value="button-63" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="607.0" layoutY="622.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="118.0" stylesheets="@../css/button.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-delete-188.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="gradient-button2" />
+            <String fx:value="button-63" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="755.0" layoutY="625.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="112.0" stylesheets="@../css/button.css" text="Update" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="gradient-button4" />
+            <String fx:value="button-63" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="897.0" layoutY="626.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="113.0" stylesheets="@../css/button.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="gradient-button5" />
+            <String fx:value="button-63" />
+         </styleClass>
+      </JFXButton>
+      <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="972.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-today-94.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="834.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-update-94.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
