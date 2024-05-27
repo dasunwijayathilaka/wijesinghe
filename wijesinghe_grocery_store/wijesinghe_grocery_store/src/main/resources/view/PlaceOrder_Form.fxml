@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1302.0" style="-fx-background-color: #9AECDB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PlaceOrderFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1307.0" style="-fx-background-color: #9AECDB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PlaceOrderFormController">
    <children>
       <Label layoutX="545.0" layoutY="-6.0" prefHeight="38.0" prefWidth="249.0" text="Place Order Form" textFill="#262121">
          <font>
@@ -81,7 +81,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnNEW" buttonType="RAISED" layoutX="848.0" layoutY="78.0" onAction="#btnNewCustomerOnAction" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #686de0;" text="NEW" textFill="WHITE">
+      <JFXButton fx:id="btnnewos" buttonType="RAISED" layoutX="848.0" layoutY="78.0" onAction="#btnNewCustomerOnAction" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #686de0;" text="NEW" textFill="WHITE">
          <graphic>
 
          </graphic>

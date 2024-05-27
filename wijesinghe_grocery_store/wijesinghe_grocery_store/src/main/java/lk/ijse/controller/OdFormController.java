@@ -9,25 +9,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class PlaceOrderFormController {
+public class OdFormController {
 
     @FXML
     private JFXButton btnAddtocart1;
 
     @FXML
-    private JFXButton btnnewos;
+    private JFXButton btnNEW;
 
     @FXML
     private JFXButton btnplaceOrder;
 
     @FXML
-    private JFXComboBox<?> cmbCustomerId;
+    private JFXComboBox<?> cmbCustomerId1;
 
     @FXML
     private JFXComboBox<?> cmbdiscountcode;
-
-    @FXML
-    private JFXComboBox<?> cmbitemCode;
 
     @FXML
     private TableColumn<?, ?> colDescription;
@@ -48,13 +45,13 @@ public class PlaceOrderFormController {
     private TableColumn<?, ?> colitemName;
 
     @FXML
+    private Label labelCustomerName;
+
+    @FXML
     private Label labelDescription;
 
     @FXML
-    private Label labelDiscountPrice;
-
-    @FXML
-    private Label labelNetTotal;
+    private Label labelDiscountprice;
 
     @FXML
     private Label labelOrderId;
@@ -63,31 +60,28 @@ public class PlaceOrderFormController {
     private Label labelOrderdate;
 
     @FXML
-    private Label labelPaymentAmount;
+    private Label labelPaymenamount;
 
     @FXML
-    private Label labelPaymentId;
+    private Label labelUnitprice;
 
     @FXML
-    private Label labelPaymentType;
+    private Label labelUsername;
 
     @FXML
-    private Label labelQtyOnHand;
+    private Label labelnettotal;
 
     @FXML
-    private Label labelSubTotal;
+    private Label labelpaymentId;
 
     @FXML
-    private Label labelUnitPrice;
+    private Label labelqty;
 
     @FXML
-    private Label labelUserId;
+    private Label labelsubtotal;
 
     @FXML
-    private Label labelUserName;
-
-    @FXML
-    private Label lableCustomerName;
+    private Label labeluserId;
 
     @FXML
     private TableView<?> tblOrderCart;
@@ -127,11 +121,6 @@ public class PlaceOrderFormController {
 
     @FXML
     void discountcodeOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void itemCodeOnAction(ActionEvent event) {
 
     }
 

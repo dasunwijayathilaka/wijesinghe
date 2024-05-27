@@ -271,35 +271,13 @@ public class SupplyFormController {
     }
 
     public void PrintBillOnAction(ActionEvent actionEvent) throws JRException, SQLException {
-       /* JasperDesign jasperDesign = JRXmlLoader.load("reports/Supply.jrxml");
-        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);*/
-
-//        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("src/resources/reports/Supply.jrxml");
-//        JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
-//        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
-//
-//
-//
-//        Map<String, Object> data = new HashMap<>();
-//
-//        String supId = cmbSupplierID.getValue();
-//        System.out.println( supId+ "suplier id to report");
-//        data.put("supId", supId);
-//
-//
-//        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, DbConnection.getInstance().getConnection());
-//        JasperViewer.viewReport(jasperPrint,false);
-
-
-            JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/reports/Supply.jrxml");
-            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
-
-            Map<String, Object> data = new HashMap<>();
-            data.put("S_ID", cmbSupplierID.getValue());
-
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, dbConnection.getInstance().getConnection());
-            JasperViewer.viewReport(jasperPrint, false);
-
+        JasperDesign jasperDesign = JRXmlLoader.load("C:\\Users\\USER\\Desktop\\New folder (2)\\wijesinghe_grocery_store\\wijesinghe_grocery_store\\src\\main\\resources\\reports\\Supply.jrxml");
+        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+        Map<String,Object> data = new HashMap<>();
+        String orderID = cmbSupplierID.getValue();
+        data.put("supID",orderID);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, DbConnection.getInstance().getConnection());
+        JasperViewer.viewReport(jasperPrint,false);
 
 
 
